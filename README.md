@@ -1,3 +1,9 @@
-# VuePress Starter
+# Today I Learned
 
-index page 이빈다.
+https://jhcse5189.github.io/TIL/
+
+### Progress
+
+```
+2022. 02. 01. - manual deployment by deploy.sh
+```

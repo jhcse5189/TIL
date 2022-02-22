@@ -2,6 +2,13 @@
 
 https://jhcse5189.github.io/TIL/
 
+
+### Build locally
+
+```
+$ yarn docs:dev
+```
+
 ### Progress
 
 ```

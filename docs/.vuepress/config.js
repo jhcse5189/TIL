@@ -7,14 +7,34 @@ module.exports = {
     dest: 'build',
     themeConfig: {
         sidebar: [
+			{
+				title: 'MIL',
+				children: CONST.MILList
+			},
             {
                 title: 'Algorithm',
                 children: CONST.AlgorithmList
             },
+			{
+				title: 'Data Structure',
+				children: CONST.DataStructureList
+			},
+			{
+				title: 'Web',
+				childrend: CONST.WebList
+			},
             {
                 title: 'JavaScript',
                 children: CONST.JavaScriptList
-            }
+            },
+			{
+				title: 'Linux',
+				children: CONST.LinuxList
+			},
+			{
+				title: 'C++',
+				children: CONST.CppList
+			}
         ]
     }
 }

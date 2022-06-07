@@ -1,7 +1,33 @@
+exports.MILList = [
+	"MIL/mil-2203.md",
+	"MIL/mil-2206.md",
+];
+
 exports.AlgorithmList = [
+	"Algorithm/time-complexity.md",
     "Algorithm/dfs-bfs.md",
+	"Algorithm/heap.md",
+	"Algorithm/greedy.md",
+];
+
+exports.DataStructureList = [
+	"Data-Structure/priority-queue.md",
+];
+
+exports.WebList = [
+	"Web/http.md",
 ];
 
 exports.JavaScriptList = [
-    "JavaScript/"
+    "JavaScript/fetch.md",
+];
+
+exports.LinuxList = [
+	"Linux/curl.md",
+];
+
+exports.CppList = [
+	"C++/class.md",
+	"C++/eof.md",
+	"C++/type-cast.md",
 ];

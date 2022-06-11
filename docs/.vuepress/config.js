@@ -1,7 +1,7 @@
 var CONST = require("./const");
 
 module.exports = {
-    title: 'Hello VuePress',
+    title: 'Today Bammer Learned',
     description: 'Github TIL Pages',
     base: "/TIL/",
     dest: 'build',
@@ -35,6 +35,16 @@ module.exports = {
 				title: 'C++',
 				children: CONST.CppList
 			}
-        ]
-    }
+        ],
+		nav: [
+			{
+				text: 'GitHub',
+				link: 'https://github.com/jhcse5189/'
+			},
+			{
+				text: 'Blog',
+				link: 'https://jhcse5189.github.io/'
+			}
+		]
+    },
 }

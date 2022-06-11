@@ -5,6 +5,7 @@ exports.MILList = [
 
 exports.AlgorithmList = [
 	"Algorithm/time-complexity.md",
+	"Algorithm/binary_search.md",
     "Algorithm/dfs-bfs.md",
 	"Algorithm/heap.md",
 	"Algorithm/greedy.md",

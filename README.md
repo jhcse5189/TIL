@@ -43,4 +43,5 @@ https://github.com/webpack/webpack/issues/14532
 ```
 2022. 02. 01. - manual deployment by deploy.sh
 2022. 06. 12. - fix Node 17 openssl 3.0 Webpack issue
+2022. 10. 04. - fix local-build method as of today on Ubuntu 20.04 LTS
 ```

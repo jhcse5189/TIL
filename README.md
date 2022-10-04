@@ -2,6 +2,16 @@
 
 https://jhcse5189.github.io/TIL/
 
+### Environment (as of 22.10.05)
+```
+$ lsb_release -a
+Description:    Ubuntu 20.04 LTS
+$ sudo apt-get install -y nodejs
+$ node -v
+v18.10.0
+$ npm -v
+8.19.2
+```
 
 ### Build locally (as of 22.10.04)
 
@@ -32,10 +42,16 @@ $ sh deploy.sh
 - [x] Node 17 openssl 3.0 Webpack issue
 
 ```
+(install nodejs latest)
 $ export NODE_OPTIONS=--openssl-legacy-provider
 
 /* Reference */
 https://github.com/webpack/webpack/issues/14532
+```
+
+- [x] Authentication failed for remote setting
+```
+$ git remote set-url origin https://jhcse5189:{token}@github.com/jhcse5189/TIL/
 ```
 
 ### Progress

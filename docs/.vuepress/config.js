@@ -23,10 +23,12 @@ module.exports = {
 				title: 'Web',
 				childrend: CONST.WebList
 			},
+			/*
 			{
 				title: 'Boolean Algebra',
 				children: CONST.BooleanAlgebraList
 			},
+			*/
             {
                 title: 'JavaScript',
                 children: CONST.JavaScriptList
@@ -51,10 +53,12 @@ module.exports = {
 				title: 'PS',
 				children: CONST.PSList
 			},
+			/*
 			{
 				title: '뻘글',
 				children: CONST.GossipList
 			}
+			*/
         ],
 		nav: [
 			{

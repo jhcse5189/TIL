@@ -3,7 +3,7 @@
 # abort on errors
 set -e
 
-# clear node 17 openssl issue
+# clear node 17 openssl issue on vscode-server
 export NODE_OPTIONS=--openssl-legacy-provider
 
 # build

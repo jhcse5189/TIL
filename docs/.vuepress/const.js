@@ -19,6 +19,10 @@ exports.WebList = [
 	"Web/http.md",
 ];
 
+exports.BooleanAlgebraList = [
+	"Boolean-Algebra/Canonical-Form.md",
+];
+
 exports.JavaScriptList = [
     "JavaScript/fetch.md",
 ];

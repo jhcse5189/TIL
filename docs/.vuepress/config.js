@@ -19,6 +19,14 @@ module.exports = {
 				title: 'Data Structure',
 				children: CONST.DataStructureList
 			},
+			{
+				title: 'Web',
+				childrend: CONST.WebList
+			},
+			{
+				title: 'Boolean Algebra',
+				children: CONST.BooleanAlgebraList
+			},
             {
                 title: 'JavaScript',
                 children: CONST.JavaScriptList

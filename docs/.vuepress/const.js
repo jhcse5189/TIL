@@ -31,4 +31,22 @@ exports.CppList = [
 	"C++/class.md",
 	"C++/eof.md",
 	"C++/type-cast.md",
+	"C++/stringstream.md",
+];
+
+exports.PythonList = [
+	"Python/mutable.md",
+	"Python/asterisks.md",
+	"Python/list-comprehension.md",
+];
+
+exports.PSList = [
+	"PS/implementation.md",
+	"PS/sorting.md",
+	"PS/dp.md",
+];
+
+exports.GossipList = [
+	"Gossip/major-non-major.md",
+	"Gossip/momentary-memory.md",
 ];

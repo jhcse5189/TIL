@@ -19,10 +19,6 @@ module.exports = {
 				title: 'Data Structure',
 				children: CONST.DataStructureList
 			},
-			{
-				title: 'Web',
-				childrend: CONST.WebList
-			},
             {
                 title: 'JavaScript',
                 children: CONST.JavaScriptList
@@ -32,8 +28,24 @@ module.exports = {
 				children: CONST.LinuxList
 			},
 			{
+				title: 'Web',
+				children: CONST.WebList
+			},
+			{
 				title: 'C++',
 				children: CONST.CppList
+			},
+			{
+				title: 'Python',
+				children: CONST.PythonList
+			},
+			{
+				title: 'PS',
+				children: CONST.PSList
+			},
+			{
+				title: '뻘글',
+				children: CONST.GossipList
 			}
         ],
 		nav: [

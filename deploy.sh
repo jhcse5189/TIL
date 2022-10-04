@@ -3,6 +3,9 @@
 # abort on errors
 set -e
 
+# clear node 17 openssl issue
+export NODE_OPTIONS=--openssl-legacy-provider
+
 # build
 yarn docs:build
 

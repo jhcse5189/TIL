@@ -11,10 +11,10 @@ module.exports = {
 				title: 'MIL',
 				children: CONST.MILList
 			},
-            {
-                title: 'Algorithm',
-                children: CONST.AlgorithmList
-            },
+			{
+					title: 'Algorithm',
+					children: CONST.AlgorithmList
+			},
 			{
 				title: 'Data Structure',
 				children: CONST.DataStructureList
@@ -23,16 +23,14 @@ module.exports = {
 				title: 'Web',
 				childrend: CONST.WebList
 			},
-			/*
 			{
 				title: 'Boolean Algebra',
 				children: CONST.BooleanAlgebraList
 			},
-			*/
-            {
-                title: 'JavaScript',
-                children: CONST.JavaScriptList
-            },
+			{
+					title: 'JavaScript',
+					children: CONST.JavaScriptList
+			},
 			{
 				title: 'Linux',
 				children: CONST.LinuxList
@@ -52,6 +50,10 @@ module.exports = {
 			{
 				title: 'PS',
 				children: CONST.PSList
+			},
+			{
+				title: 'Math',
+				children: CONST.MathList
 			},
 			/*
 			{

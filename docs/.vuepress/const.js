@@ -19,11 +19,9 @@ exports.WebList = [
 	"Web/http.md",
 ];
 
-/*
 exports.BooleanAlgebraList = [
-	"Boolean-Algebra/Canonical-Form.md",
+	"Boolean-Algebra/canonical-Form.md",
 ];
-*/
 
 exports.JavaScriptList = [
     "JavaScript/fetch.md",
@@ -50,6 +48,10 @@ exports.PSList = [
 	"PS/implementation.md",
 	"PS/sorting.md",
 	"PS/dp.md",
+];
+
+exports.MathList = [
+	"Math/euclidean_algorithm.md",
 ];
 
 /*

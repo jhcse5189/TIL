@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Binary Search | Today Bammer Learned</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Github TIL Pages">
+    
+    <link rel="preload" href="/TIL/assets/css/0.styles.f8069f0c.css" as="style"><link rel="preload" href="/TIL/assets/js/app.73e34d09.js" as="script"><link rel="preload" href="/TIL/assets/js/2.f4913aff.js" as="script"><link rel="preload" href="/TIL/assets/js/7.090c3424.js" as="script"><link rel="prefetch" href="/TIL/assets/js/10.6cb6fcd7.js"><link rel="prefetch" href="/TIL/assets/js/11.cf4105af.js"><link rel="prefetch" href="/TIL/assets/js/12.336a170e.js"><link rel="prefetch" href="/TIL/assets/js/13.769dc25b.js"><link rel="prefetch" href="/TIL/assets/js/14.d80de0b3.js"><link rel="prefetch" href="/TIL/assets/js/15.d567b65f.js"><link rel="prefetch" href="/TIL/assets/js/16.5e38e2fb.js"><link rel="prefetch" href="/TIL/assets/js/17.52a41868.js"><link rel="prefetch" href="/TIL/assets/js/18.04e36dc3.js"><link rel="prefetch" href="/TIL/assets/js/19.6282f101.js"><link rel="prefetch" href="/TIL/assets/js/20.e4dffaae.js"><link rel="prefetch" href="/TIL/assets/js/21.dec7bcae.js"><link rel="prefetch" href="/TIL/assets/js/22.d868725d.js"><link rel="prefetch" href="/TIL/assets/js/23.73600a7e.js"><link rel="prefetch" href="/TIL/assets/js/24.e6584154.js"><link rel="prefetch" href="/TIL/assets/js/25.91dd83cc.js"><link rel="prefetch" href="/TIL/assets/js/26.4af83b7a.js"><link rel="prefetch" href="/TIL/assets/js/27.967482dd.js"><link rel="prefetch" href="/TIL/assets/js/28.961cb303.js"><link rel="prefetch" href="/TIL/assets/js/29.45586fc0.js"><link rel="prefetch" href="/TIL/assets/js/3.28587c1c.js"><link rel="prefetch" href="/TIL/assets/js/30.8377e5ed.js"><link rel="prefetch" href="/TIL/assets/js/31.fed4395f.js"><link rel="prefetch" href="/TIL/assets/js/32.c17adf13.js"><link rel="prefetch" href="/TIL/assets/js/33.a9829a66.js"><link rel="prefetch" href="/TIL/assets/js/34.0fe0efed.js"><link rel="prefetch" href="/TIL/assets/js/35.7998f59f.js"><link rel="prefetch" href="/TIL/assets/js/4.bff542e8.js"><link rel="prefetch" href="/TIL/assets/js/5.32dde0b2.js"><link rel="prefetch" href="/TIL/assets/js/6.345e52dd.js"><link rel="prefetch" href="/TIL/assets/js/8.1f3cb9b3.js"><link rel="prefetch" href="/TIL/assets/js/9.af20a760.js">
+    <link rel="stylesheet" href="/TIL/assets/css/0.styles.f8069f0c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/TIL/" class="home-link router-link-active"><!----> <span class="site-name">Today Bammer Learned</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://github.com/jhcse5189/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://jhcse5189.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Blog
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://github.com/jhcse5189/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://jhcse5189.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Blog
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MIL</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Algorithm</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/TIL/Algorithm/time-complexity.html" class="sidebar-link">/Algorithm/time-complexity.html</a></li><li><a href="/TIL/Algorithm/binary_search.html" aria-current="page" class="active sidebar-link">Binary Search</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/TIL/Algorithm/binary_search.html#example" class="sidebar-link">Example.</a></li><li class="sidebar-sub-header"><a href="/TIL/Algorithm/binary_search.html#ref" class="sidebar-link">Ref.</a></li></ul></li><li><a href="/TIL/Algorithm/dfs-bfs.html" class="sidebar-link">DFS</a></li><li><a href="/TIL/Algorithm/heap.html" class="sidebar-link">/Algorithm/heap.html</a></li><li><a href="/TIL/Algorithm/greedy.html" class="sidebar-link">Greedy Algorithm</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Data Structure</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Web</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Boolean Algebra</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Web</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C++</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>PS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Math</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tensorflow</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="binary-search"><a href="#binary-search" class="header-anchor">#</a> Binary Search</h1> <p>이분탐색, <code>O(log N)</code>의 시간복잡도를 갖는 탐색 알고리즘이다. 데이터가 정렬되어 있다는 가정 하, 탐색하는 데이터의 범위를 절반씩 줄인다. 배열에서 특정한 데이터의 인덱스, 존재 유무를 알 수 있는데 PS에서는 Parametric Search, DP 등과 응용되어 출제된다. End point에서 장난질하거나 다양한 섬세한 요구를 하면 까다로워 지는데, 정말 싫다!</p> <div class="language-cpp extra-class"><pre class="language-cpp"><code>
+</code></pre></div><p>BST(Binary Search Tree)는 여기로 가자.</p> <h1 id="ternary-search"><a href="#ternary-search" class="header-anchor">#</a> Ternary Search</h1> <p>삼분탐색. 비슷하게 중간값을 <code>left-thrid</code>, <code>right-third</code> 2개를 가지고 범위를 줄여가며 탐색을 한다. 그러면 시간복잡도는 <code>O(log3 N)</code> 일텐데 왜 안쓰냐라고 한다면 참... 뭔가 이유가 있지 않을까? 한 탐색당 걸리는 시간이 더 걸려서 아마 그렇지 않을까. 배열 길이랑 똑같이 N분 탐색을 해버리는 <code>O(logN N) = 1</code> 한 번 찾을 때 바로 찾겠다만 이러면 선형탐색이랑 뭐가 다르겠나. 보통 PS에서도 의사코드를 주고 시작하지만 그래도 중간값을 2개 이상 잡는 논리를 이해해보자.</p> <div class="language-cpp extra-class"><pre class="language-cpp"><code>
+</code></pre></div><h2 id="example"><a href="#example" class="header-anchor">#</a> Example.</h2> <div class="language- extra-class"><pre class="language-text"><code>/* 문제를 풀어보고 아래 접근을 참고할 것 */
+
+[o] 백준 1920번, 수 찾기
+[o] 백준 2805번, 나무 자르기
+[o] 백준 2512번, 예산
+[o] 백준 1072번, 게임
+
+[o] 백준 7795번, Eat or Be Eaten
+
+[o] 백준 19599번, 이진 삼진 탐색 놀이 1
+[ ] 백준 19600번, 이진 삼진 탐색 놀이 2
+[ ] 백준 19601번, 이진 삼진 탐색 놀이 3
+
+[ ] 기출문제 1, 정렬된 배열에서 특정 수의 개수 구하기 (Zoho 인터뷰)
+[ ] 기출문제 2, 고정점 찾기 (Amazon 인터뷰)
+[ ] 백준 2110번, 공유기 설치
+[ ] 기출문제 3, 가사 검색 (2020 Kakao 신입 공채 1차)
+</code></pre></div><h3 id="백준-1072번-게임"><a href="#백준-1072번-게임" class="header-anchor">#</a> # 백준 1072번, 게임</h3> <p>아직 이해가 되지 않는다... 아직 C에서 어떨 때 정수형 데이터는 실수로 받고,
+이를 그대로 받든 문제에서 원하는 스택대로 데이터 손실을 시키든 정확하게 변환하는 방법 말이다.</p> <div class="language-cpp extra-class"><pre class="language-cpp"><code>
+</code></pre></div><h3 id="백준-7795번-eat-or-be-eaten"><a href="#백준-7795번-eat-or-be-eaten" class="header-anchor">#</a> # 백준 7795번, Eat or Be Eaten</h3> <p>임의의 중복이 있는 정수 배열 2개에 대해 비교한다고 직관적으로 생각이 들었는데 계속 새로운 유형의 문제에서 이진탐색을 떠올릴 수 있을까 모르겠다.</p> <p>가장 단순한 방법으로 접근하면, N개의 배열을 순회하면서 M개의 값과 비교하여 총 개수를 증가시킬 수 있겠다. 이렇게 풀어버리면 O(NM)의 시간복잡도를 갖는데 둘 다 범위가 2만개 이하라서 최악의 경우 4억번의 연산이 필요하며 문제 입력에서는 테스트 케이스 수까지 받아서 시간초과가 뜰 것이다.</p> <p>그래서 일단 정렬을 해봤는데, 그러면 그냥 N개를 순회하면서 M개의 배열에 이진탐색을 진행하여 뱉어내는 인덱스 값을 바탕으로 총 개수를 갱신시키면 되겠다 싶었다. 배열 이름은 각각 a와 b로 두겠다. 일단 배열 a의 값이 b의 최댓값보다 크다면 총 개수에 M개를 더하기만 하면 된다.</p> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> bMax<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	result <span class="token operator">+=</span> m<span class="token punctuation">;</span>
+	<span class="token keyword">continue</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>그렇지 않다면 시작점과 끝점의 인덱스를 <code>0</code>, <code>m - 1</code>로 잡고 이진탐색을 진행하는데, 처음에는 반복문 조건이랑 끝점을 옮기는 부분에서 디테일이 필요할 줄 알았는데, 그렇게 해도 맞았고 그냥 기본적인 parametric search 하듯이 짜도 정답을 찾아간다. a의 값이 b[mid] 값보다 작거나 같다면 r를 mid까지 옮기고 제외한 범위에는 답이 존재하지 않는다. a가 b[mid]보다 크면 그 때마다 저장해주면 끝난다.</p> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token keyword">while</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> b<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		r <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		ans <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>ans <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+	result <span class="token operator">+=</span> ans <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+</code></pre></div><p>저장한 인덱스 값이 0일 수도 있으니, 인덱스에 1을 더한 값을 총 개수에 저장하도록 하고, 만약 한 번도 a가 b[mid]보다 크지 않은 경우에는 총 개수에는 더할 값이 없다. 파이썬으로는 일반적인 이진탐색으로 짜보고 제출했는데 문제없다!</p> <div class="language-python extra-class"><pre class="language-python"><code>ans <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+
+<span class="token keyword">while</span> l <span class="token operator">&lt;=</span> r<span class="token punctuation">:</span>
+
+	mid <span class="token operator">=</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+
+	<span class="token keyword">if</span> a<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> b<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">:</span>
+		r <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span>
+
+	<span class="token keyword">else</span><span class="token punctuation">:</span>
+		l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span>
+		ans <span class="token operator">=</span> mid
+
+<span class="token keyword">if</span> ans <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
+	result <span class="token operator">+=</span> ans <span class="token operator">+</span> <span class="token number">1</span>
+</code></pre></div><h2 id="ref"><a href="#ref" class="header-anchor">#</a> Ref.</h2> <div class="language- extra-class"><pre class="language-text"><code>이것이 코딩 테스트다 with 파이썬 - 나동빈
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/TIL/Algorithm/time-complexity.html" class="prev">
+        /Algorithm/time-complexity.html
+      </a></span> <span class="next"><a href="/TIL/Algorithm/dfs-bfs.html">
+        DFS
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/TIL/assets/js/app.73e34d09.js" defer></script><script src="/TIL/assets/js/2.f4913aff.js" defer></script><script src="/TIL/assets/js/7.090c3424.js" defer></script>
+  </body>
+</html>
